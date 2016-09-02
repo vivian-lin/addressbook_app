@@ -1,0 +1,18 @@
+<h1>Update Contact</h1>
+<p>Given name: <%=@contact.given_name%></p>
+<p>Family name: <%=@contact.family_name%></p>
+<p>Email: <%=@contact.email%></p>
+<p>Address: <%=@contact.address%></p>
+<br>
+<form action="/contacts/update" method="get">
+  <input type="text" name="given_name" value="<%=@contact.given_name%>" required>
+  <br><br>
+  <input type="text" name="family_name" value="<%=@contact.family_name%>" required>
+  <br><br>
+  <input type="email" name="email" value="<%=@contact.email%>">
+  <br><br>
+  <input type="text" name="address" value="<%=@contact.address%>">
+  <br><br>
+  <input type="hidden" name="id" value="<%= @contact.id %>">
+  <input type="submit" value="Update">
+</form>

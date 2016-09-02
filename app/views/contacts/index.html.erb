@@ -1,0 +1,19 @@
+<h1>Welcome to AddressBook</h1>
+<h3>Save a new contact to your AddressBook:</h3>
+<form action="/contacts/save" method="get">
+  <input type="text" name="given_name" placeholder="Given name" required>
+  <br><br>
+  <input type="text" name="family_name" placeholder="Family name" required>
+  <br><br>
+  <input type="email" name="email" placeholder="Email address">
+  <br><br>
+  <input type="text" name="address" placeholder="Home address">
+  <br><br>
+  <input type="submit" value="Save Contact">
+</form>
+<br>
+<%=flash.now[:alert]%>
+<br>
+<br>
+<p>Click the button to see all your saved contacts:</p>
+<a href="http://localhost:3000/contacts/view"><button type="button" name="button">View AddressBook</button></a>

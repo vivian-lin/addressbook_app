@@ -1,0 +1,24 @@
+<h1>Your AddressBook</h1>
+<table>
+  <thead>
+    <th>Given Name</th>
+    <th>Family Name</th>
+    <th>Email</th>
+    <th>Address</th>
+  </thead>
+  <tbody>
+    <% @all_contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.given_name %></td>
+        <td><%= contact.family_name %></td>
+        <td><%= contact.email %></td>
+        <td><%= contact.address %></td>
+        <td><form action="/contacts/edit" method="get">
+              <input type="hidden" name="id" value="<%= contact.id %>">
+              <input type="submit" value="Update">
+            </form>
+        </td>
+      </tr>
+    <%end%>
+  </tbody>
+</table>

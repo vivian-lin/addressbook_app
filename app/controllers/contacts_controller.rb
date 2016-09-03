@@ -38,4 +38,11 @@ class ContactsController < ApplicationController
 
     render 'edit.html.erb'
   end
+
+  def destroy
+    @contact = Contact.find(params[:id])
+    @contact.destroy
+    flash[:alert] = "Your contact has been deleted."
+    redirect_to '/contacts/view'
+  end
 end

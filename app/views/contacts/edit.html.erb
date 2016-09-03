@@ -16,3 +16,14 @@
   <input type="hidden" name="id" value="<%= @contact.id %>">
   <input type="submit" value="Update">
 </form>
+<br>
+<a href="http://localhost:3000/contacts/view"><button type="button" name="button">View AddressBook</button></a>
+<br>
+<br>
+<a href="http://localhost:3000/"><button type="button" name="button">Add Contact</button></a>
+<br>
+<br>
+<form action="/contacts/destroy" method="get">
+  <input type="hidden" name="id" value="<%= @contact.id %>">
+  <input type="submit" value="Delete">
+</form>
